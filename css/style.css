@@ -407,6 +407,7 @@ body::-webkit-scrollbar-thumb {
   color: #9a9797;
   height: 100px;
   overflow-y: auto;
+  font-size: 18px;
 }
 
 .testimonial-box span {
