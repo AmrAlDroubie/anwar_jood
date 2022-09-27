@@ -1,0 +1,470 @@
+/* Fonts */
+@font-face {
+  font-family: "Cairo";
+  src: url("../fonts/Cairo-Black.woff2") format("woff2"),
+    url("Cairo-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("../fonts/Cairo-Bold.woff2") format("woff2"),
+    url("../fonts/Cairo-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("../fonts/Cairo-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Cairo-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("../fonts/Cairo-Medium.woff2") format("woff2"),
+    url("../fonts/Cairo-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("../fonts/Cairo-Regular.woff2") format("woff2"),
+    url("../fonts/Cairo-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("../fonts/Cairo-SemiBold.woff2") format("woff2"),
+    url("../fonts/Cairo-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Main  Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Cairo", "sans-serif";
+  font-weight: 600;
+  background-color: #fafafa;
+}
+
+#fake-logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--clr-primary);
+}
+
+:root {
+  --clr-primary: #489ddc;
+  --clr-secondry: #2d2d2d;
+  --clr-white: #fff;
+  --tran-primary: 0.4s;
+  --font-primary: "Cairo", "sans-serif";
+}
+
+/* Scrollbar */
+
+body::-webkit-scrollbar {
+  background-color: var(--clr-primary);
+  width: 9px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--clr-secondry);
+  min-height: 180px;
+}
+
+/* ===== Main Classes ===== */
+
+/* -------  Colors ------- */
+
+/* textColor */
+.clr-primary {
+  color: var(--clr-primary);
+}
+
+.clr-secondry {
+  color: var(--clr-secondry);
+}
+
+.clr-white {
+  color: #fff;
+}
+
+.light-text {
+  color: #818181;
+}
+
+/* BackgroundColor */
+.back-primary {
+  background-color: var(--clr-primary);
+}
+
+.back-secondry {
+  background-color: var(--clr-secondry);
+}
+
+.back-white {
+  background-color: #fff;
+}
+
+/* Shadow */
+.shadow-primary {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.268);
+}
+
+.shadow-secondry {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.095);
+}
+
+/*----------------- Fonts --------------*/
+/* FontFamily */
+.font-primary {
+  font-family: var(--font-primary);
+}
+
+.font-secondry {
+  font-family: var(--font-secondry);
+}
+
+/* FontSizes */
+.font-18 {
+  font-size: 18px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.font-25 {
+  font-size: 25px;
+}
+
+.font-title {
+  font-size: 30px;
+}
+
+.font-large-title {
+  font-size: 45px;
+}
+
+@media (max-width: 767px) {
+  .font-18 {
+    font-size: 16px;
+  }
+  .font-20 {
+    font-size: 18px;
+  }
+  .font-25 {
+    font-size: 22px;
+  }
+  .font-title {
+    font-size: 24px;
+  }
+  .font-large-title {
+    font-size: 28px;
+  }
+}
+
+/* Some Classes */
+
+.under-line-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: var(--clr-secondry);
+  border-radius: 3px;
+  display: block;
+  margin: auto;
+}
+
+.index--1 {
+  z-index: -1;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* centered with position  */
+
+.center-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* centered with flex */
+
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* whatsapp */
+#fixed-whatsapp-btn {
+  width: 60px;
+  height: 60px;
+  font-size: 35px;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  background-color: #25d366;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  z-index: 5555;
+}
+
+/* ======================= Landing Section =========================== */
+
+.swiper-btns {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 33;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.swiper-btn {
+  font-size: 20px;
+  color: #fff;
+  background-color: var(--clr-primary);
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 10px;
+}
+
+.swiper-button-disabled.swiper-btn {
+  background-color: rgba(149, 149, 149, 0.495);
+  cursor: not-allowed;
+}
+
+#full-screen-swiper .full-screen-slide {
+  min-height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#full-screen-swiper .full-screen-pagination {
+  position: absolute;
+  z-index: 33;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+}
+
+#full-screen-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: rgb(190, 189, 189);
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+#full-screen-swiper .swiper-pagination-bullet-active {
+  background-color: var(--clr-secondry);
+}
+
+/*========================== About Us ===================== */
+
+/* =================== What Do  ======================= */
+
+.what-do-box {
+  transition: var(--tran-primary);
+  padding: 15px 10px;
+  border-radius: 10px;
+}
+
+.what-do-box h5 {
+  font-size: 20px;
+}
+
+.what-do-box span {
+  font-size: 18px;
+}
+
+.what-do-box:hover {
+  background-color: #fff;
+}
+
+.what-do-box:hover svg {
+  fill: var(--clr-primary) !important;
+}
+
+.what-do-box:hover > * {
+  color: #2d2d22 !important;
+}
+.what-do-box svg {
+  width: 100px;
+  fill: #fff;
+}
+
+/* ======================= Our Work ======================== */
+.our-work-box {
+  cursor: pointer;
+}
+.our-work-box img {
+  height: 385px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#portifolio-modal img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 2/1;
+}
+@media (max-width: 767px) {
+  #portifolio-modal img {
+    aspect-ratio: 1/1;
+  }
+}
+
+/* ========================= Testimonial ====================== */
+.testimonial {
+  background-color: #f5f5f5;
+}
+#testimonial-swiper {
+  min-height: 350px;
+}
+
+.testimonial-box {
+  min-height: 240px;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.testimonial-box::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: var(--clr-primary);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  transform: translate(57%, -54%);
+  z-index: 1;
+}
+
+.testimonial-box > * {
+  position: relative;
+  z-index: 333;
+}
+
+.testimonial-box p {
+  line-height: 33px;
+  color: #9a9797;
+  height: 100px;
+  overflow-y: auto;
+}
+
+.testimonial-box span {
+  font-weight: bold;
+  color: var(--clr-primary);
+  font-size: 22px;
+}
+
+.testimonial-box .icon-quote {
+  font-size: 85px;
+  color: #f5f5f5;
+  transform: rotate(-30deg) translate(-10%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  z-index: 2;
+}
+
+.swiper-pagination {
+  position: absolute;
+  z-index: 33;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: rgb(190, 189, 189);
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--clr-secondry);
+}
+
+/*================== contact-us ================ */
+.contact-us-map iframe {
+  height: 400px;
+  aspect-ratio: 1/1;
+}
+
+/* ================== footer ========================= */
+.footer-list-link {
+  color: #6d6d6d;
+}
+.copy-rights .scroll-top-footer {
+  background-color: var(--clr-primary);
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+.copy-rights {
+  border-top: 1px solid rgb(205, 205, 205);
+}
